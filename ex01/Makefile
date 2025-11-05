@@ -5,17 +5,17 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/11/05 15:21:17 by ricardo           #+#    #+#              #
-#    Updated: 2025/11/05 16:30:32 by ricardo          ###   ########.fr        #
+#    Created: 2025/11/05 16:49:00 by ricardo           #+#    #+#              #
+#    Updated: 2025/11/05 16:50:46 by ricardo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME        = megaphone
+NAME        = phonebook
 CXX         = c++
 CXX_FLAGS   = -Wall -Wextra -Werror -std=c++98
 RM          = rm -f
 
-SRC         = Megaphone.cpp
+SRC         = main.cpp Contact.cpp PhoneBook.cpp
 OBJ         = $(SRC:.cpp=.o)
 
 all: $(NAME)
