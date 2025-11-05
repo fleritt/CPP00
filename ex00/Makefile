@@ -1,0 +1,37 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ricardo <ricardo@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/11/05 15:21:17 by ricardo           #+#    #+#              #
+#    Updated: 2025/11/05 15:22:14 by ricardo          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME        = megaphone
+CXX         = c++
+CXX_FLAGS   = -Wall -Wextra -Werror -std=c++98
+RM          = rm -f
+
+SRC         = megaphone.cpp
+OBJ         = $(SRC:.cpp=.o)
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CXX) $(CXX_FLAGS) $(OBJ) -o $(NAME)
+
+%.o: %.cpp
+	$(CXX) $(CXX_FLAGS) -c $< -o $@
+
+clean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
